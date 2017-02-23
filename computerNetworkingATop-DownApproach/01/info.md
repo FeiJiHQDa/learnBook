@@ -8,3 +8,4 @@
 
 #### 1.4 分组交换网中的延迟、对包和吞吐量
 
+Linux `Traceroute` 软件查看 网络信息 [Traceroute](http://traceroute.org) ;  windows `Tracert` 软件,直接运行命, 格式 tracert www.csdn.net
