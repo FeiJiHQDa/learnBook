@@ -16,6 +16,11 @@ COMMIT;
 ROLLBACK;   -- 回退
 ```
 
+* 原子性(atomicity)
+* 一致性(consistency)
+* 隔离性(isolation)
+* 持久性(durability)
+
 ### 隔离级别
 
 * READ uncommitted (未提交读)
