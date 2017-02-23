@@ -9,6 +9,13 @@
 
 ## 1.3 事物
 
+开启事物 
+```mysql
+START TRANSACTION; && begin; 
+COMMIT;
+ROLLBACK;   -- 回退
+```
+
 ### 隔离级别
 
 * READ uncommitted (未提交读)
