@@ -31,3 +31,22 @@ ROLLBACK;   -- 回退
     * InnoDB 和 XtraDB 通过多版本并发控制(MVCC, Multiversion Concurrency Control) 解决幻读问题
 * serializable (可串行化)
 
+### 死锁
+
+例如:
+```mysql
+-- 事物 1
+START TRANSACTION
+update stockPrice SET close = 45.05 where stock_id = 4 and data = '2002-5-1';
+update stockPrice SET close = 15.05 where stock_id = 3 and data = '2002-5-02';
+COMMIT
+
+-- 事物 2
+START TRANSACTION
+update stockPrice SET close = 15.05 where stock_id = 3 and data = '2002-5-02';
+update stockPrice SET close = 45.05 where stock_id = 4 and data = '2002-5-1';
+COMMIT
+
+```
+InnoDB 目前处理死锁的方法是， 将持有最少行级的排他锁的事物进行回滚 ( 这是相对比较简单的死锁回滚算法 )
+
