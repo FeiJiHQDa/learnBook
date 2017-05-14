@@ -10,8 +10,9 @@ SQLite 教程链接 [http://www.runoob.com/sqlite/sqlite-tutorial.html](http://w
 
 ```sqlite
 创建数据库 : sqlite3 DatabaseName.db (进入sqlite目录)
+
 创建表 :
-CREATE TABLE COMPANY(
+CREATE TABLE DATABASES.COMPANY(
    ID INT PRIMARY KEY     NOT NULL,
    NAME           TEXT    NOT NULL,
    AGE            INT     NOT NULL,
@@ -20,9 +21,11 @@ CREATE TABLE COMPANY(
 );
 
 插入:
-INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+INSERT INTO DATABASES.COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (1, 'Paul', 32, 'California', 20000.00 );
 
+进入数据库 : sqlite3 DatabaseName.db
+附加数据库 : ATTACH DATABASE 'testDB.db' as 'TEST';
 查看数据库目录:  .databases
 退出：.quit
 
