@@ -9,6 +9,7 @@
 
 ## docker 商店
  [docker stroe](hub.docker.com)
+ [网易蜂巢](https://c.163.com/hub#/m/home/)
 
  ## 镜像命令
 
@@ -16,8 +17,12 @@ docker images
 
  ## 容器命令
 
- docker ps
- docker ps -a
+1. docker ps
+2. docker ps -a
+3. docker rm id
+4. docker start id
+5. docker run
+6. docker stop id
 
  ## Dockerfile 使用
 
@@ -29,3 +34,5 @@ docker run -d -P --name web -v c:/one/test:/var/www -p 8088:80  -p 3307:3306 -p 
 
 进入 Linux
  docker exec -it 243c32535da7  /bin/bash
+
+
