@@ -23,6 +23,7 @@ docker images
 4. docker start id
 5. docker run
 6. docker stop id
+7. docker restart id 重启容器
 
  ## Dockerfile 使用
 
