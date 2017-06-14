@@ -46,6 +46,8 @@ update 表 set <fields> = null
  自增 
  update <table> set <fields> = <fields> + 1
 
+修改表名
+ALTER  TABLE table_name RENAME TO new_table_name
 ```
 
 #### 删除系列
