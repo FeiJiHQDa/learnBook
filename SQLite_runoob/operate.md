@@ -27,6 +27,7 @@ VALUES (1, 'Paul', 32, 'California', 20000.00 );
 进入数据库 : sqlite3 DatabaseName.db
 附加数据库 : ATTACH DATABASE 'testDB.db' as 'TEST';
 查看数据库目录:  .databases
+查看表目录 .table
 退出：.quit
 
 select 语句:                  SELECT * FROM COMPANY;
