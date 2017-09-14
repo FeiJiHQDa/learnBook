@@ -52,12 +52,12 @@ ALTER  TABLE table_name RENAME TO new_table_name
 
 #### 删除系列
 ```mysql
-删除表的数据      delete from <table>;     
-删除表的指定数据  delete from <table> where id = ?;     
-删除表清除        AUTO_INCREMENT值和数据 truncate table <table>     
-删除表            drop table <table>     
-删除数据库       drop database <database>     
-删除表字段:      ALTER TABLE student DROP sex; :
+删除表的数据                        delete from <table>;     
+删除表的指定数据                    delete from <table> where id = ?;     
+删除表清除 AUTO_INCREMENT值和数据   truncate table <table>     
+删除表                             drop table <table>     
+删除数据库                         drop database <database>     
+删除表字段:                        ALTER TABLE student DROP sex; :
 ```
 #### 查看数据库状态
 ```mysql
