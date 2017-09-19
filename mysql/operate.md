@@ -5,7 +5,7 @@
 
 #### 查看系列
 
-```mysql
+```sql
 查看表目录 : show tables;
 查看数据库列表： show databases;    
 进入数据库: use <database>;    
@@ -14,7 +14,7 @@
 
 #### 修改系列
 1. 第一类
-```mysql
+```sql
 创建数据库:     
 CREATE DATABASE IF NOT EXISTS <database> DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;     
             可选 utf8_general_ci || utf8mb4_general_ci || utf8mb4_unicode_ci
@@ -34,13 +34,13 @@ insert into `<table>` (`id`, `username`, `password`) values (NULL, 'whchao', 'wh
 
 ```
 2. 第二类
-```mysql
+```sql
  修改表注释: LTER TABLE base_excel COMMENT '导入excel记录表';
 
 ```
 
 3. 更新系列：     
-```mysql
+```sql
 不删除字段，只更新其中的内容： 
 update 表 set <fields> = null    
  自增 
@@ -51,7 +51,7 @@ ALTER  TABLE table_name RENAME TO new_table_name
 ```
 
 #### 删除系列
-```mysql
+```sql
 删除表的数据                        delete from <table>;     
 删除表的指定数据                    delete from <table> where id = ?;     
 删除表清除 AUTO_INCREMENT值和数据   truncate table <table>     
@@ -60,7 +60,7 @@ ALTER  TABLE table_name RENAME TO new_table_name
 删除表字段:                        ALTER TABLE student DROP sex; :
 ```
 #### 查看数据库状态
-```mysql
+```sql
 最大链接数: show variables like 'max_connections'; 
 查看当前执行数 show processlist; 
 显示当前状态 show status;
@@ -69,7 +69,7 @@ ALTER  TABLE table_name RENAME TO new_table_name
 
 #### Mysql授权远程访问
 
-```mysql
+```sql
 赋予任何主机访问数据的权限 : mysql>GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'WITH GRANT OPTION
 myuser使用mypassword任何主机连接到mysql服务器 : GRANT ALL PRIVILEGES ON *.* TO 'myuser'@'%'IDENTIFIED BY 'mypassword' WITH GRANT OPTION;
 myuser从ip为192.168.1.6 : GRANT ALL PRIVILEGES ON *.* TO 'myuser'@'192.168.1.3'IDENTIFIED BY 'mypassword' WITH GRANT OPTION;
