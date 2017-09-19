@@ -8,7 +8,7 @@ SQLite 教程链接 [http://www.runoob.com/sqlite/sqlite-tutorial.html](http://w
 
 
 
-```sqlite
+```sql
 创建数据库 : sqlite3 DatabaseName.db (进入sqlite目录)
 
 创建表 :
@@ -46,7 +46,7 @@ Distinct 关键字 :              SELECT DISTINCT name FROM COMPANY;
 
 ## after -> height
 #### SQLite 约束
-```sqlite
+```sql
 NOT NULL :    确保某列不能有 NULL 值
 DEFAULT :     当某列没有指定值时，为该列提供默认值
 UNIQUE :      唯一值
