@@ -91,7 +91,12 @@ rollback;
 ### 排序数据
 ```sql
 
- SELECT * FROM table_name where field_name = ? AND // OR field_name IN(?, ?) ORDER BY field_name ASC(upload) && DESC(downlaod)
+基本查询语句
+ SELECT * FROM table_name where field_name = ? AND // OR field_name IN(?, ?) 
+ ORDER BY field_name ASC(upload) && DESC(downlaod)
+
+ 分页 ：
+ select * from table_name limit 30 , 10 ## 第四页
 SELECT * FROM table_name
 
 ````
