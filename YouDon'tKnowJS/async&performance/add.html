@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+function add(getX,getY,cb) {
+	var x, y;
+	getX( function(xVal){
+		x = xVal;
+		// 两者都准备好了？
+		if (y != undefined) {
+			cb( x + y );	// 发送加法的结果
+		}
+	} );
+	getY( function(yVal){
+		y = yVal;
+		// 两者都准备好了？
+		if (x != undefined) {
+			cb( x + y );	// 发送加法的结果
+		}
+	} );
+}
+
+
+function fetchX(xVal) {
+	return 12;
+}
+
+function fetchY(yVal) {
+	return 443;
+}
+
+// `fetchX()`和`fetchY()`是同步或异步的函数
+add( fetchX, fetchY, function(sum){
+	console.log( sum ); // 很简单吧？
+} );
+
+
+</script>    
+
+</body>
+</html>
